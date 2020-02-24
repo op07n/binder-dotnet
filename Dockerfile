@@ -84,6 +84,8 @@ RUN echo "$PATH"
 # Install kernel specs
 RUN dotnet try jupyter install
 
+ENV ASPNETCORE_URLS=http://+:5000
+
 # Enable telemetry once we install jupyter for the image
 ENV DOTNET_TRY_CLI_TELEMETRY_OPTOUT=false
 
